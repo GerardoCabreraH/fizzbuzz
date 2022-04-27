@@ -7,6 +7,7 @@ Consiste en un ejercicio basado en una aplicación existente y lo que se tenia q
 ## Paquetes instalados
 
 1. JEST
+2. Linter
 
 ## Datos
 - Gerardo Cabrera
