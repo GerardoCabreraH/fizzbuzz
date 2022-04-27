@@ -1,7 +1,7 @@
 {
   "name": "fizzbuzz",
   "version": "1.0.0",
-  "description": "",
+  "description": "Consiste en un ejercicio basado en una aplicación existente y lo que se tenia que hacer es refactorizar el código",
   "main": "index.js",
   "scripts": {
     "test": "jest"
@@ -10,6 +10,18 @@
   "author": "GerardoCabreraH",
   "license": "ISC",
   "devDependencies": {
-    "jest": "^28.0.2"
-  }
+    "jest": "^26.0.0"
+  },
+  "directories": {
+    "lib": "lib",
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/GerardoCabreraH/fizzbuzz.git"
+  },
+  "bugs": {
+    "url": "https://github.com/GerardoCabreraH/fizzbuzz/issues"
+  },
+  "homepage": "https://github.com/GerardoCabreraH/fizzbuzz#readme"
 }
