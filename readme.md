@@ -9,6 +9,6 @@ Consiste en un ejercicio basado en una aplicación existente y lo que se tenia q
 1. JEST
 
 ## Datos
-Gerardo Cabrera
-Github: [GerardoCabreraH](https://github.com/GerardoCabreraH)
-Playbook donde se encuentra el ejercicio: [Playbook](https://github.com/GerardoCabreraH/playbook)
+- Gerardo Cabrera
+- Github: [GerardoCabreraH](https://github.com/GerardoCabreraH)
+- Playbook donde se encuentra el ejercicio: [Playbook](https://github.com/GerardoCabreraH/playbook)
