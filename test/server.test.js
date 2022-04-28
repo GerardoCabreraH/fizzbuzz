@@ -10,7 +10,7 @@ describe("Probar rutas del servidor", () => {
                 console.log(res.body);
                 expect((res.body).message).toBe("FizzBuzz Api welcome!");
             })
-            .end((err, res) => {
+            .end((err) => {
                 if (err) return done(err);
                 return done();
             });
@@ -23,7 +23,7 @@ describe("Probar rutas del servidor", () => {
                 console.log(res.body);
                 expect(res.body.length).toBe(10);
             })
-            .end((err, res) => {
+            .end((err) => {
                 if (err) return done(err);
                 return done();
             });
@@ -36,7 +36,7 @@ describe("Probar rutas del servidor", () => {
                 console.log(res.body);
                 expect(res.body.length).toBe(5);
             })
-            .end((err, res) => {
+            .end((err) => {
                 if (err) return done(err);
                 return done();
             });
@@ -50,7 +50,7 @@ describe("Probar rutas del servidor", () => {
                 expect((res.body).mission).toBe("node");
                 expect((res.body).quantity).toBe(10);
             })
-            .end((err, res) => { 
+            .end((err) => { 
                 if (err) return done(err);
                 return done();
             });
@@ -64,7 +64,7 @@ describe("Probar rutas del servidor", () => {
                 expect((res.body).mission).toBe("java");
                 expect((res.body).quantity).toBe(5);
             })
-            .end((err, res) => {
+            .end((err) => {
                 if (err) return done(err);
                 return done();
             });
@@ -78,7 +78,7 @@ describe("Probar rutas del servidor", () => {
                 expect((res.body).mission).toBe("node");
                 expect((res.body).explorers.length).toBe(10);
             })
-            .end((err, res) => {
+            .end((err) => {
                 if (err) return done(err);
                 return done();
             });
@@ -92,7 +92,7 @@ describe("Probar rutas del servidor", () => {
                 expect((res.body).mission).toBe("java");
                 expect((res.body).explorers.length).toBe(5);
             })
-            .end((err, res) => {
+            .end((err) => {
                 if (err) return done(err);
                 return done();
             });
