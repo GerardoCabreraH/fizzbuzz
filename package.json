@@ -4,6 +4,7 @@
   "description": "Consiste en un ejercicio basado en una aplicación existente y lo que se tenia que hacer es refactorizar el código",
   "main": "index.js",
   "scripts": {
+    "start": "node index.js",
     "test": "jest",
     "linter": "node ./node_modules/eslint/bin/eslint.js .",
     "linter-fix": "node ./node_modules/eslint/bin/eslint.js . --fix"
