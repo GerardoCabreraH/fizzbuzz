@@ -132,7 +132,7 @@ describe("Probar rutas del servidor", () => {
             .expect((res) => {
                 console.log(res.body);
                 expect((res.body).trick).toBe("BUZZ");
-                expect((res.body).score).toBe(1);
+                expect((res.body).score).toBe(5);
             })
             .end((err) => {
                 if (err) return done(err);
