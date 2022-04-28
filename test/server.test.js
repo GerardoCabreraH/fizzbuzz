@@ -97,4 +97,60 @@ describe("Probar rutas del servidor", () => {
                 return done();
             });
     });
+    test("Requerimiento 8: Obtener trick score", (done) => {
+        request(app)
+            .get("/v1/fizzbuzz/1")
+            .expect(200)
+            .expect((res) => {
+                console.log(res.body);
+                expect((res.body).trick).toBe(1);
+                expect((res.body).score).toBe(1);
+            })
+            .end((err) => {
+                if (err) return done(err);
+                return done();
+            });
+    });
+    test("Requerimiento 9: Obtener trick FIZZ", (done) => {
+        request(app)
+            .get("/v1/fizzbuzz/3")
+            .expect(200)
+            .expect((res) => {
+                console.log(res.body);
+                expect((res.body).trick).toBe("FIZZ");
+                expect((res.body).score).toBe(3);
+            })
+            .end((err) => {
+                if (err) return done(err);
+                return done();
+            });
+    });
+    test("Requerimiento 10: Obtener trick BUZZ", (done) => {
+        request(app)
+            .get("/v1/fizzbuzz/5")
+            .expect(200)
+            .expect((res) => {
+                console.log(res.body);
+                expect((res.body).trick).toBe("BUZZ");
+                expect((res.body).score).toBe(1);
+            })
+            .end((err) => {
+                if (err) return done(err);
+                return done();
+            });
+    });
+    test("Requerimiento 11: Obtener trick FIZZBUZZ", (done) => {
+        request(app)
+            .get("/v1/fizzbuzz/15")
+            .expect(200)
+            .expect((res) => {
+                console.log(res.body);
+                expect((res.body).trick).toBe("FIZZBUZZ");
+                expect((res.body).score).toBe(15);
+            })
+            .end((err) => {
+                if (err) return done(err);
+                return done();
+            });
+    });
 });

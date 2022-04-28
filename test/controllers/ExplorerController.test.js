@@ -39,4 +39,20 @@ describe("Test para ExplorerService", () => {
         const getvalidatorInJava = explorersInJava.map((explorer) => ExplorerController.getValidationInExplorer(explorer));
         expect(getvalidatorInJava.length).toBe(5);
     });
+    test("Requerimiento 9: Obtener el validador score", () => {
+        const getvalidatorInScore = ExplorerController.getValidationInScore(1);
+        expect(getvalidatorInScore.trick).toBe(1);
+    });
+    test("Requerimiento 10: Obtener el validador FIZZ", () => {
+        const getvalidatorInScore = ExplorerController.getValidationInScore(3);
+        expect(getvalidatorInScore.trick).toBe("FIZZ");
+    });
+    test("Requerimiento 11: Obtener el validador BUZZ", () => {
+        const getvalidatorInScore = ExplorerController.getValidationInScore(5);
+        expect(getvalidatorInScore.trick).toBe("BUZZ");
+    });
+    test("Requerimiento 12: Obtener el validador FIZZBUZZ", () => {
+        const getvalidatorInScore = ExplorerController.getValidationInScore(15);
+        expect(getvalidatorInScore.trick).toBe("FIZZBUZZ");
+    });
 });
