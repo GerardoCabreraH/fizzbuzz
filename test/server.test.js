@@ -14,6 +14,7 @@ describe("Probar rutas del servidor", () => {
                 return done();
             });
     });
+
     test("Requerimiento 2: Filtrar explorers por mision node", (done) => {
         request(app)
             .get("/v1/explorers/node")
@@ -26,6 +27,7 @@ describe("Probar rutas del servidor", () => {
                 return done();
             });
     });
+
     test("Requerimiento 3: Filtrar explorers por mision java", (done) => {
         request(app)
             .get("/v1/explorers/java")
@@ -38,6 +40,7 @@ describe("Probar rutas del servidor", () => {
                 return done();
             });
     });
+
     test("Requerimiento 4: Filtrar cantidad de explorers por mision node", (done) => {
         request(app)
             .get("/v1/explorers/amount/node")
@@ -51,6 +54,7 @@ describe("Probar rutas del servidor", () => {
                 return done();
             });
     });
+
     test("Requerimiento 5: Filtrar cantidad de explorers por mision java", (done) => {
         request(app)
             .get("/v1/explorers/amount/java")
@@ -64,6 +68,7 @@ describe("Probar rutas del servidor", () => {
                 return done();
             });
     });
+
     test("Requerimiento 6: Filtrar usernames de los explorers por mision node", (done) => {
         request(app)
             .get("/v1/explorers/usernames/node")
@@ -77,6 +82,7 @@ describe("Probar rutas del servidor", () => {
                 return done();
             });
     });
+
     test("Requerimiento 7: Filtrar usernames de los explorers por mision java", (done) => {
         request(app)
             .get("/v1/explorers/usernames/java")
@@ -90,6 +96,7 @@ describe("Probar rutas del servidor", () => {
                 return done();
             });
     });
+
     test("Requerimiento 8: Obtener trick score", (done) => {
         request(app)
             .get("/v1/fizzbuzz/1")
@@ -103,6 +110,7 @@ describe("Probar rutas del servidor", () => {
                 return done();
             });
     });
+
     test("Requerimiento 9: Obtener trick FIZZ", (done) => {
         request(app)
             .get("/v1/fizzbuzz/3")
@@ -116,6 +124,7 @@ describe("Probar rutas del servidor", () => {
                 return done();
             });
     });
+
     test("Requerimiento 10: Obtener trick BUZZ", (done) => {
         request(app)
             .get("/v1/fizzbuzz/5")
@@ -129,6 +138,7 @@ describe("Probar rutas del servidor", () => {
                 return done();
             });
     });
+
     test("Requerimiento 11: Obtener trick FIZZBUZZ", (done) => {
         request(app)
             .get("/v1/fizzbuzz/15")
@@ -136,6 +146,71 @@ describe("Probar rutas del servidor", () => {
             .expect((res) => {
                 expect((res.body).trick).toBe("FIZZBUZZ");
                 expect((res.body).score).toBe(15);
+            })
+            .end((err) => {
+                if (err) return done(err);
+                return done();
+            });
+    });
+
+    test("Filtrar explorers por stack javascript", (done) => {
+        request(app)
+            .get("/v1/explorers/stack/javascript")
+            .expect(200)
+            .expect((res) => {
+                expect(res.body.length).toBe(11);
+            })
+            .end((err) => {
+                if (err) return done(err);
+                return done();
+            });
+    });
+
+    test("Filtrar explorers por stack ReasonML", (done) => {
+        request(app)
+            .get("/v1/explorers/stack/reasonML")
+            .expect(200)
+            .expect((res) => {
+                expect(res.body.length).toBe(9);
+            })
+            .end((err) => {
+                if (err) return done(err);
+                return done();
+            });
+    });
+
+    test("Filtrar explorers por stack ELM", (done) => {
+        request(app)
+            .get("/v1/explorers/stack/elm")
+            .expect(200)
+            .expect((res) => {
+                expect(res.body.length).toBe(12);
+            })
+            .end((err) => {
+                if (err) return done(err);
+                return done();
+            });
+    });
+
+    test("Filtrar explorers por stack Groovy", (done) => {
+        request(app)
+            .get("/v1/explorers/stack/groovy")
+            .expect(200)
+            .expect((res) => {
+                expect(res.body.length).toBe(9);
+            })
+            .end((err) => {
+                if (err) return done(err);
+                return done();
+            });
+    });
+
+    test("Filtrar explorers por stack Elixir", (done) => {
+        request(app)
+            .get("/v1/explorers/stack/elixir")
+            .expect(200)
+            .expect((res) => {
+                expect(res.body.length).toBe(9);
             })
             .end((err) => {
                 if (err) return done(err);
