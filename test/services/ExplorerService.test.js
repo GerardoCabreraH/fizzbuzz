@@ -9,13 +9,11 @@ describe("Test para ExplorerService", () => {
 
     test("Requerimientos 2: obtener el mismo resultado de explorers en una mision", () => {
         const amountExplorersInNode = ExplorerService.getAmountOfExplorersByMission(explorers, "node");
-        expect(amountExplorersInNode.mission).toBe("node");
-        expect(amountExplorersInNode.quantity).toBe(1);
+        expect(amountExplorersInNode).toBe(1);
     });
 
     test("Requerimientos 3: Obtener los usernames en una mision", () => {
         const usernamesExplorersInNode = ExplorerService.getExplorersUsernamesByMission(explorers, "node");
-        expect(usernamesExplorersInNode.mission).toBe("node");
-        expect(usernamesExplorersInNode.explorers.length).toBe(1);
+        expect(usernamesExplorersInNode.length).toBe(1);
     });
 });

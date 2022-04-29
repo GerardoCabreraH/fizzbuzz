@@ -23,18 +23,18 @@ describe("Test para ExplorerService", () => {
     });
     test("Requerimientos 5: Score trick", () => {
         const explorer = FizzbuzzService.applyValidationInNumber(1);
-        expect(explorer.trick).toBe(1);
+        expect(explorer).toBe(1);
     });
     test("Requerimientos 6: Fizz trick", () => {
         const explorer = FizzbuzzService.applyValidationInNumber(3);
-        expect(explorer.trick).toBe("FIZZ");
+        expect(explorer).toBe("FIZZ");
     });
     test("Requerimientos 7: Buzz trick", () => {
         const explorer = FizzbuzzService.applyValidationInNumber(5);
-        expect(explorer.trick).toBe("BUZZ");
+        expect(explorer).toBe("BUZZ");
     });
     test("Requerimientos 8: FizzBuzz trick", () => {
         const explorer = FizzbuzzService.applyValidationInNumber(15);
-        expect(explorer.trick).toBe("FIZZBUZZ");
+        expect(explorer).toBe("FIZZBUZZ");
     });
 });
