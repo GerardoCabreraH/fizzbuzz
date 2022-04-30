@@ -3,6 +3,7 @@
 ## Fizzbuzz
 
 Consiste en un ejercicio basado en una aplicación existente y lo que se tenia que hacer es refactorizar el código.
+Tambien tengo el ejercicio forkeado con el pull request [Fizzbuzz](https://github.com/GerardoCabreraH/fizzbuzz-gerardo)
 
 ## Paquetes instalados
 
