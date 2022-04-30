@@ -4,8 +4,6 @@
 
 Consiste en un ejercicio basado en una aplicación existente y lo que se tenia que hacer es refactorizar el código.
 
-También incluye la solución la parte 4 del ejercicio y se implemento tanto en este repositorio como en el fork [fizzbuzz-fork](https://github.com/GerardoCabreraH/fizzbuzz-fork)
-
 ## Paquetes instalados
 
 1. JEST
