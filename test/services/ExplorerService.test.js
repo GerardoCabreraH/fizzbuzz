@@ -3,6 +3,8 @@ const ExplorerService = require("./../../lib/services/ExplorerService");
 describe("Test para ExplorerService", () => {
     const explorersByMission = [{ mission: "node" }];
 
+    const explorersByStack = [{ stacks: ["javascript"] }];
+
     test("Requerimiento 1: calcular todos los explorers en una mision", () => {
         const explorersInNode = ExplorerService.filterByMission(explorersByMission, "node");
         expect(explorersInNode.length).toBe(1);
@@ -16,5 +18,10 @@ describe("Test para ExplorerService", () => {
     test("Requerimiento 3: Obtener los usernames en una mision", () => {
         const usernamesExplorersInNode = ExplorerService.getExplorersUsernamesByMission(explorersByMission, "node");
         expect(usernamesExplorersInNode.length).toBe(1);
+    });
+
+    test("Requerimiento 4: Obtener los explorers por stack", () => {
+        const explorersInJavascript = ExplorerService.filterByStack(explorersByStack, "javascript");
+        expect(explorersInJavascript.length).toBe(1);
     });
 });
