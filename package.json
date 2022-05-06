@@ -8,7 +8,8 @@
     "test": "node ./node_modules/jest/bin/jest",
     "linter": "node ./node_modules/eslint/bin/eslint.js .",
     "linter-fix": "node ./node_modules/eslint/bin/eslint.js . --fix",
-    "bot": "node ./lib/bot.js"
+    "bot": "node ./lib/bot.js",
+    "bot2": "node ./lib/bot2.js"
   },
   "keywords": [],
   "author": "GerardoCabreraH",
